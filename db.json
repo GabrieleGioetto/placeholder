@@ -1,0 +1,159 @@
+{
+  "Quote": [
+    {
+      "id": 1,
+      "quoteIdentifier": "quoteIdentifier1",
+      "driver_ID": 1,
+      "car_ID": 1,
+      "repairShop_ID": 1,
+      "requestDate" : "01/01/2018",
+      "status" : 2,
+      "userDetails" : "ho spaccato il finestrino",
+      "operIntDetails": "dettagli Int",
+      "operExtDetails": "dettagli Ext",
+      "quoteTotal" : 100,
+      "discountTotal": 80,
+      "expDate": "04/01/2018",
+      "isVisible" : 1,
+      "paid" : 0,
+      "operator_ID": 1
+    }
+  ],
+  "Driver": [
+    {
+      "id": 1,
+      "name" : "Gabriele",
+      "surname" :"Gioetto",
+      "sex" :"M",
+      "dateOfBirth" :"01/01/1998",
+      "ZIPcode":"12048",
+      "telephone" : "7007000000",
+      "privacy":0,
+      "user_ID": 1
+    }
+  ],
+  "Operator": [
+    {
+      "ID": 1,
+      "name" : "Andrea",
+      "surname" :"Rossi",
+      "user_ID": 2
+    }
+  ],
+  "User": [
+    {
+      "ID": 1,
+      "realm" : "Non so cos'è sto campo",
+      "username": "GabrieleUsername",
+      "password" : "pw",
+      "email" : "g.gioetto@jetop.com",
+      "emailVerified" : 1,
+      "verificationToken" :"token1"
+    },
+    {
+      "ID": 2,
+      "realm" : "Non so cos'è sto campo",
+      "username": "AndreaUsername",
+      "password" : "pw",
+      "email" : "andrea.rossi@gmail.com",
+      "emailVerified" : 1,
+      "verificationToken" :"token2"
+    }
+  ],
+  "Invoice": [
+    {
+      "ID" : 1,
+      "number" : "",
+      "date" : "03/10/2018",
+      "fileUrl": "www.fileInvoice.com",
+      "payment_ID" : 1,
+      "operator_ID" :2,
+      "billingAddress_ID" :1,
+      "quote_ID": 1,
+      "driver_ID" : 1
+    }
+  ],
+  "BillingAddress": [
+    {
+      "ID" : 1,
+      "fullName" : "Gabriele GIoetto",
+      "address": "Via Roma 12",
+      "city" : "Sommariva Bosco",
+      "zipCode" :12048,
+      "province" :"CN",
+      "country":"Italy",
+      "driver_ID" : 1
+    }
+  ],
+  "Payment": [
+    {
+      "ID" : 1,
+      "quote_ID" : 1,
+      "paymentMethod": "Master Card",
+      "paidTotal" : 80,
+      "date" : "03/01/2018",
+      "stripeID": "ch_1DeTy0IhsM9xKm64BiIkUXCF"
+    }
+  ],
+  "Car": [
+    {
+      "ID": 1,
+      "plate" : "DC555GG",
+      "model" : "Fiat 500L",
+      "driver_ID": 1,
+      "carType_ID" : 1
+    }
+  ],
+  "CarType": [
+    {
+      "ID": 1,
+      "typeName" : "5 porte",
+      "typePath" : "5P",
+      "imagePath_F" : "F.png",
+      "imagePath_B" : "B.png",
+      "imagePath_L" : "L.png",
+      "imagePath_R" : "R.png"
+    }
+  ],
+  "CarPart": [
+    {
+      "ID": 1,
+      "side" : "F",
+      "partIdentifier" : 1,
+      "partName" : "parabrezza",
+      "carType" : 1
+    }
+  ],
+  "Damage": [
+    {
+      "ID": 1,
+      "description" : "Scheggiatura a parabrezza",
+      "price" : 130,
+      "carPart_ID" : 1,
+      "quote_ID" : 1
+    }
+  ],
+  "DamagePicture": [
+    {
+      "ID": 1,
+      "pictureUrl" : "www.urlDamagePicture.com",
+      "damage_ID" : 1,
+      "damage_carPart_ID" : 1,
+      "damage_quote_ID" : 1
+    }
+  ],
+  "RepairShop": [
+    {
+      "ID": 1,
+      "intIdentificator" : "intIdentificator1",
+      "name" : "NomeMeccanico",
+      "address" : "Via Garibaldi 6",
+      "city" : "Sommariva Bosco",
+      "ZIP": "12048",
+      "province": "CN",
+      "VAT": "<iva>"
+    }
+  ]
+
+
+}
